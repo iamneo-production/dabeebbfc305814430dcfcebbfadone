@@ -1,7 +1,9 @@
+
+using dotnetmicroserviceone.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<TaskContext>(
+builder.Services.AddDbContext<ProductDbContext>(
         options =>
         { 
             options.UseSqlServer(builder.Configuration.GetConnectionString("dbconnection")); 
