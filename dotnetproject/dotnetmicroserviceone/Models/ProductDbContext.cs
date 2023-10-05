@@ -8,6 +8,10 @@ namespace dotnetmicroserviceone.Models
 {
     public class ProductDbContext: DbContext
     {
-        
+        public ProductDbContext(DbContextOptions<TaskContext> options)
+        : base(options)
+        {
+        }
+        public DbSet<Product> Products{get; set;}
     }
 }
